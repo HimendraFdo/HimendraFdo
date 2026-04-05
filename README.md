@@ -1,16 +1,24 @@
-## Hi there 👋
+# Hi there, I'm Himendra Fernando👋
 
-<!--
-**HimendraFdo/HimendraFdo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a Computer Science student at the University of Waikato interested in software engineering, full-stack development, and data-driven applications.
 
-Here are some ideas to get you started:
+## Technical Interests
+- Full-stack web development
+- Data visualisation
+- Algorithms and problem solving
+- Software engineering internships
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Tech Stack
+- Python
+- Java
+- TypeScript / JavaScript
+- React
+- Tailwind CSS
+- Git
+
+## Featured Projects
+- Personal Analytics Dashboard
+
+## Links
+- LinkedIn: (https://www.linkedin.com/in/himendra-fernando-aa2aa5313/)
+- Email: fernandohimendra@gmail.com
