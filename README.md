@@ -20,5 +20,5 @@ I'm a Computer Science student at the University of Waikato interested in softwa
 - Personal Analytics Dashboard
 
 ## Links
-- LinkedIn: (https://www.linkedin.com/in/himendra-fernando-aa2aa5313/)
+- LinkedIn: https://www.linkedin.com/in/himendra-fernando-aa2aa5313/
 - Email: fernandohimendra@gmail.com
