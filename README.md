@@ -4,59 +4,118 @@ I'm a Computer Science student at the University of Waikato, focused on software
 
 I enjoy turning ideas into usable products with clean interfaces, reliable backend logic, secure APIs, tested workflows, and real-world value.
 
----
-
 ## 🚀 About Me
 
 - 🎓 Studying Computer Science at the University of Waikato, with an expected completion date of November 2027
 - ⭐ Currently maintaining an A+ average
 - 💻 Aspiring Software Engineering Intern
-- 🧩 Interested in full-stack development, backend systems, databases, cloud infrastructure, and interactive web applications
-- 🌱 Currently building with React, TypeScript, ASP.NET Core, PostgreSQL, Docker, Terraform, AWS, Next.js, Prisma, and Tailwind CSS
+- 🧩 Interested in full-stack development, backend systems, databases, cloud infrastructure, payments, and interactive web applications
+- 🌱 Currently building with Next.js, React, TypeScript, ASP.NET Core, PostgreSQL, SQL Server, Sanity, Stripe, Azure, AWS, Docker, and Terraform
 - 🔍 Actively seeking software engineering internship opportunities
-
----
 
 ## 🧠 Technical Skills
 
-**Languages**  
+### Languages
+
 Python • Java • C# • TypeScript • JavaScript • HTML • CSS • SQL
 
-**Frontend**  
-React • Vite • Next.js • Tailwind CSS • Responsive Design • Reusable Components • Recharts
+### Frontend
 
-**Backend & Databases**  
-ASP.NET Core Minimal APIs • Entity Framework Core • PostgreSQL • Prisma ORM • REST APIs • CRUD Workflows • API Validation • Neon • Zod
+React • Next.js App Router • Vite • Tailwind CSS • shadcn/ui • Base UI • Framer Motion • React Hook Form • Recharts • Responsive Design • Accessible UI
 
-**Cloud, Security & Testing**  
-AWS ECS Fargate • ECR • RDS • ALB • CloudFront • Secrets Manager • CloudWatch • Terraform • Docker • JWT Auth • CORS • Rate Limiting • xUnit • Vitest • Git • GitHub • Vercel
+### Backend, APIs & Data
 
-**Core Concepts**  
-Data Structures and Algorithms • Object-Oriented Programming • Software Engineering Principles • API Design • Authentication • Validation • Testing • Problem Solving
+ASP.NET Core Minimal APIs • Entity Framework Core • ASP.NET Core Identity • PostgreSQL • SQL Server / Azure SQL • Prisma ORM • REST APIs • JWT Authentication • Role-Based Authorization • Zod • Sanity CMS • Neon
 
----
+### Cloud, Payments & DevOps
+
+Azure App Service • Azure SQL • Azure Key Vault • Managed Identity • Application Insights • GitHub Actions • CI/CD Pipelines • OpenID Connect (OIDC) • AWS ECS Fargate • ECR • RDS • ALB • CloudFront • Secrets Manager • CloudWatch • Stripe Elements • PaymentIntents • Webhooks • Resend • Docker • Terraform • Vercel
+
+### Azure & CI/CD Experience
+
+- Designed and implemented a GitHub Actions CI/CD pipeline for an ASP.NET Core 8 API targeting Azure App Service
+- Automated dependency restoration, Release builds, xUnit test execution, application publishing, artifact handling, and deployment
+- Configured path-based and manual workflow triggers so backend changes run through the delivery pipeline
+- Used OpenID Connect federation for short-lived Azure authentication instead of storing a publish profile or long-lived deployment credential
+- Added a protected production deployment stage that runs only after the build and test job succeeds
+- Integrated Azure Key Vault with `DefaultAzureCredential` and App Service Managed Identity for production secret management
+- Configured Entity Framework Core for Azure SQL, including guarded startup migrations and generated idempotent migration scripts as CI artifacts
+- Added Application Insights integration for production logs, traces, metrics, and backend observability
+- Documented Azure resource provisioning, RBAC, App Service settings, GitHub secrets and variables, CORS configuration, and deployment requirements
+
+### Testing & Engineering
+
+xUnit • Vitest • Testing Library • API Validation • CORS • Rate Limiting • Server-Side Price Validation • Git • GitHub • CI/CD
+
+### Core Concepts
+
+Data Structures and Algorithms • Object-Oriented Programming • Software Engineering Principles • API Design • Authentication and Authorization • Database Modelling • Validation • Testing • Security-Conscious Development • Problem Solving
 
 ## 📌 Featured Projects
+
+### 🥟 My Wife's Dumplings — Full-Stack Ordering Platform
+
+A production-minded website and online ordering platform for a handmade dumpling business in Auckland, New Zealand. The application combines a content-managed storefront with secure payments, customer accounts, guest checkout, order tracking, and an administrative fulfilment workflow.
+
+🌐 [Live Frontend](https://my-wifes-dumplings.vercel.app)  
+📝 [Sanity Studio](https://mywifesdumplings.sanity.studio)  
+💻 [Repository](https://github.com/HimendraFdo/MyWifesDumplings)
+
+#### ✨ What it does
+
+- 🛍️ Provides menu, pricing, gallery, about, and contact content managed through Sanity
+- 💳 Supports guest and customer checkout with Stripe Elements and PaymentIntents
+- 🛡️ Recalculates prices on the server so the browser never controls order totals
+- 🔐 Provides customer registration, JWT login, role-based access, and account order history
+- 🔗 Gives guests secure token-based links for checking their orders
+- 📋 Includes an admin dashboard for filtering orders and updating fulfilment status
+- ✅ Verifies Stripe webhook signatures and treats webhooks as the source of truth for payment status
+- ✉️ Sends enquiry and order confirmation emails through Resend
+- 🧪 Includes frontend Vitest tests and backend xUnit tests
+- ☁️ Uses a GitHub Actions CI/CD pipeline to build, test, publish, and deploy the ASP.NET Core API to Azure App Service
+- 🔑 Uses OIDC, Azure Key Vault, and Managed Identity to avoid long-lived deployment credentials and committed production secrets
+- 🗄️ Targets Azure SQL with guarded EF Core startup migrations and idempotent migration scripts generated by CI
+- 📈 Integrates Application Insights for backend logging, tracing, metrics, and production observability
+
+#### 🛠️ Tech stack
+
+Next.js 14 App Router • React 18 • TypeScript • Tailwind CSS • shadcn/ui • Framer Motion • Sanity CMS • ASP.NET Core 8 Minimal APIs • Entity Framework Core 8 • ASP.NET Core Identity • SQL Server / Azure SQL • Stripe • Resend • JWT • Azure App Service • Azure Key Vault • Managed Identity • Application Insights • GitHub Actions • OIDC • Vitest • xUnit • Vercel
+
+#### 💡 What I learned
+
+- Designing a full-stack ordering and payment workflow across Next.js and ASP.NET Core
+- Integrating Stripe PaymentIntents while keeping card data outside the application servers
+- Treating verified webhooks as the authoritative source for payment state
+- Computing prices server-side and preserving historical order snapshots
+- Supporting guest and authenticated checkout through one consistent order model
+- Implementing Identity, JWT authentication, roles, and protected customer and admin endpoints
+- Separating CMS content from transactional SQL data
+- Building a gated CI/CD pipeline that restores, builds, tests, publishes, and deploys an ASP.NET Core API
+- Using GitHub OIDC federation to authenticate to Azure without long-lived deployment secrets
+- Designing secure cloud configuration with Azure Key Vault, Managed Identity, Azure SQL, and Application Insights
+- Managing database deployment safely with guarded EF Core migrations and idempotent migration artifacts
+- Documenting Azure provisioning, RBAC, environment configuration, deployment controls, and operational requirements
+- Testing frontend utilities, API clients, order services, admin workflows, and Stripe webhook handling
 
 ### 🌐 Full-Stack Portfolio Platform
 
 A production-minded portfolio platform that evolved from a static personal website into a full-stack application with a deployed frontend, backend API, database-backed contact workflow, authentication-protected admin logic, and AWS cloud infrastructure.
 
-**🌍 Portfolio:** [himendrafernando.vercel.app](https://himendrafernando.vercel.app)  
-**💻 GitHub:** [github.com/HimendraFdo](https://github.com/HimendraFdo)
+🌍 [Portfolio](https://himendrafernando.vercel.app)  
+💻 [GitHub](https://github.com/HimendraFdo)
 
 #### ✨ What it does
 
 - 📝 Accepts validated public contact submissions through a backend API
 - 🗄️ Persists contact records in PostgreSQL using Entity Framework Core
 - 🔐 Protects admin workflows with JWT authentication
-- 🛡️ Uses CORS controls, rate limiting, and salted IP hashing to reduce abuse and avoid storing raw visitor IP addresses
-- ☁️ Deploys infrastructure with Docker, Terraform, and AWS services including ECS Fargate, ECR, RDS, ALB, CloudFront, Secrets Manager, and CloudWatch
+- 🛡️ Uses CORS controls, rate limiting, and salted IP hashing to reduce abuse without storing raw visitor IP addresses
+- ☁️ Uses Docker, Terraform, and AWS services including ECS Fargate, ECR, RDS, ALB, CloudFront, Secrets Manager, and CloudWatch
 - ✅ Includes xUnit tests for API health, validation, persistence, admin access, status updates, and database model rules
 
 #### 🛠️ Tech stack
 
-React • Vite • TypeScript • ASP.NET Core Minimal APIs • Entity Framework Core • PostgreSQL • Docker • Terraform • AWS • JWT Auth • xUnit
+React • Vite • TypeScript • ASP.NET Core Minimal APIs • Entity Framework Core • PostgreSQL • Docker • Terraform • AWS • JWT Authentication • xUnit
 
 #### 💡 What I learned
 
@@ -67,22 +126,20 @@ React • Vite • TypeScript • ASP.NET Core Minimal APIs • Entity Framework
 - Provisioning repeatable cloud infrastructure with Terraform and AWS
 - Writing backend tests to improve confidence before deployment
 
----
-
 ### 📊 Personal Analytics Dashboard
 
-A full-stack personal metrics dashboard for logging, managing, and visualising personal activity across study, finance, health, and personal categories.
+A full-stack personal metrics dashboard for logging, managing, and visualising activity across study, finance, health, and personal categories.
 
-**🌐 Live Demo:** [personalanalyticsdashboard.vercel.app](https://personalanalyticsdashboard.vercel.app)  
-**💻 Repository:** [github.com/HimendraFdo/personal-analytics-dashboard](https://github.com/HimendraFdo/personal-analytics-dashboard)
+🌐 [Live Demo](https://personalanalyticsdashboard.vercel.app)  
+💻 [Repository](https://github.com/HimendraFdo/personal-analytics-dashboard)
 
 #### ✨ What it does
 
 - 🔐 Provides authenticated access using Clerk
 - 📝 Lets users create, edit, delete, filter, and sort personal entries
 - 🗄️ Stores user-specific data securely in PostgreSQL
-- 📈 Displays dashboard summaries for total entries, weekly activity, top category, and recent progress
-- 📊 Includes analytics charts for category totals and value trends over time
+- 📈 Displays summaries for total entries, weekly activity, top category, and recent progress
+- 📊 Includes charts for category totals and value trends over time
 - ✅ Uses validation and typed API logic to keep data reliable
 
 #### 🛠️ Tech stack
@@ -91,34 +148,29 @@ Next.js 15 App Router • React 19 • TypeScript • Tailwind CSS • Prisma OR
 
 #### 💡 What I learned
 
-- Building a production-style full-stack app with the Next.js App Router
+- Building a production-style full-stack application with the Next.js App Router
 - Protecting pages and API routes with authentication
 - Designing Prisma models, migrations, and user-scoped database queries
 - Validating API payloads before database writes
 - Managing shared client-side state across dashboard, entries, and analytics views
-- Deploying a full-stack app with Vercel, Neon, and environment variables
+- Deploying a full-stack application with Vercel, Neon, and environment variables
 - Writing tests for validation, date helpers, and data transformation logic
 
 ## 🌱 Current Focus
 
 - Improving my full-stack software engineering skills
-- Building cleaner, more reliable, and more responsive user interfaces
-- Strengthening backend design, database modelling, API validation, and authentication
-- Practicing cloud deployment, infrastructure as code, testing, and professional development workflows
-- Learning by building practical applications that solve real problems
-
----
+- Building secure ordering, payment, authentication, and administrative workflows
+- Strengthening backend design, database modelling, API validation, and automated testing
+- Strengthening Azure deployment, CI/CD, identity, secret management, database migration, and observability practices
+- Building clean, accessible, responsive interfaces for real users and businesses
 
 ## 🔗 Connect With Me
 
-- 🌐 Portfolio: [himendrafernando.vercel.app](https://himendrafernando.vercel.app)
-- 💼 LinkedIn: [linkedin.com/in/himendra-fernando](https://www.linkedin.com/in/himendra-fernando/)
-- 💻 GitHub: [github.com/HimendraFdo](https://github.com/HimendraFdo)
-- 📧 Email: [fernandohimendra@gmail.com](mailto:fernandohimendra@gmail.com)
-
----
+- 🌐 [Portfolio](https://himendrafernando.vercel.app)
+- 💼 [LinkedIn](https://linkedin.com/in/himendra-fernando)
+- 💻 [GitHub](https://github.com/HimendraFdo)
+- 📧 [fernandohimendra@gmail.com](mailto:fernandohimendra@gmail.com)
 
 ## 🎯 Goals
-I’m focused on improving my ability to build scalable applications, write clean and maintainable code, and contribute effectively within a team. I’m especially interested in opportunities where I can work on real-world systems and continue growing as a developer.
 
----
+I'm focused on improving my ability to build scalable applications, write clean and maintainable code, and contribute effectively within a team. I'm especially interested in opportunities where I can work on real-world systems and continue growing as a developer.
